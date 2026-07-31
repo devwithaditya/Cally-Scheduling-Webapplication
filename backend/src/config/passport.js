@@ -48,3 +48,7 @@ passport.use(
         }
     )
 )
+
+console.log("GOOGLE_CLIENT_ID exists:", !!process.env.GOOGLE_CLIENT_ID);
+console.log("GOOGLE_CLIENT_SECRET exists:", !!process.env.GOOGLE_CLIENT_SECRET);
+console.log("GOOGLE_REDIRECT_URI exists:", !!process.env.GOOGLE_REDIRECT_URI);

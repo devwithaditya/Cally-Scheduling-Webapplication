@@ -13,19 +13,32 @@ const transporter = nodemailer.createTransport({
     auth:{
         user:process.env.EMAIL_SERVICE_USER,
         pass:process.env.EMAIL_SERVICE_PASS
-    }
+    },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 10000,
 })
 
-//check connection
-transporter.verify((error,success)=>{
-    if(error){
-        console.log("Failed to Connect with Email Service",error)
+(async () => {
+    try {
+        console.log("Verifying transporter...");
+        await transporter.verify();
+        console.log("✅ Email Server Connected");
+    } catch (err) {
+        console.error("❌ Verify failed:", err);
     }
-    else{
-        console.log("Email Server Connected Successfully");
+})();
+
+// //check connection
+// transporter.verify((error,success)=>{
+//     if(error){
+//         console.log("Failed to Connect with Email Service",error)
+//     }
+//     else{
+//         console.log("Email Server Connected Successfully");
         
-    }
-})
+//     }
+// })
 
 const sendEmail = async ({ to, subject, text, html }) => {
     try {

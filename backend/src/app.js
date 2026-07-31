@@ -7,7 +7,7 @@ const passport = require("passport")
 const cors = require("cors")
 require("./config/passport");
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     credentials: true
 }));
 app.use(passport.initialize())

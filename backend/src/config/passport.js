@@ -5,11 +5,6 @@ const { refreshToken } = require("../controller/auth.controller")
 const jwt = require("jsonwebtoken")
 const { generateRandomWords } = require("../utils/utils")
 
-console.log("=== ENV CHECK ===");
-console.log("GOOGLE_CLIENT_ID exists:", !!process.env.GOOGLE_CLIENT_ID);
-console.log("GOOGLE_CLIENT_SECRET exists:", !!process.env.GOOGLE_CLIENT_SECRET);
-console.log("GOOGLE_REDIRECT_URI exists:", !!process.env.GOOGLE_REDIRECT_URI);
-
 passport.use(
     new GoogleStrategy(
         {

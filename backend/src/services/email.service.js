@@ -1,4 +1,8 @@
 console.log("📧 sendEmail.js loaded");
+console.log("EMAIL_SERVICE_USER exists:", !!process.env.EMAIL_SERVICE_USER);
+console.log("EMAIL_SERVICE_PASS exists:", !!process.env.EMAIL_SERVICE_PASS);
+
+
 const nodemailer = require("nodemailer")
 
 //create transporteer

@@ -1,3 +1,4 @@
+console.log("📧 sendEmail.js loaded");
 const nodemailer = require("nodemailer")
 
 //create transporteer

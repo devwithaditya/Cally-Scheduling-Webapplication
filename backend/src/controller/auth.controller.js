@@ -37,7 +37,12 @@ async function register(req,res){
     })
 
 
-    await sendEmail(email,"OTP Verification",`Your OTP is ${otp}`,html)
+    await sendEmail({
+    to: email,
+    subject: "OTP Verification",
+    text: `Your OTP is ${otp}`,
+    html: html
+    });
 
     //Random slug generation
     let randomWords = generateRandomWords(4)

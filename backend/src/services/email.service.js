@@ -38,9 +38,13 @@ const transporter = nodemailer.createTransport({
 // })
 
 const sendEmail = async ({ to, subject, text, html }) => {
+    console.log("Sending email...");
+    console.log("Recipient:", to);
+    console.log("Subject:", subject);
+
     try {
         const info = await transporter.sendMail({
-            from: `"Calendly" <${process.env.EMAIL_SERVICE_USER}>`,
+            from: `"Cally" <${process.env.EMAIL_FROM}>`,
             to,
             subject,
             text,

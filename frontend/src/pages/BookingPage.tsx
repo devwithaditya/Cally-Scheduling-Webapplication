@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
-import { Clock, Globe, Check, ChevronLeft, ChevronRight, Calendar, User, Mail,BookOpen,Video } from "lucide-react";
+import { Clock, Globe, Check, ChevronLeft, ChevronRight, Calendar, User } from "lucide-react";
 import {  fadeUp } from "../shared";
 import api from "../services/api";
 import logo from "../images/logo.png"
@@ -34,7 +34,7 @@ export function BookingPage() {
   const [notes, setNotes]           = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError]   = useState("");
-  const [booking, setBooking]       = useState<any>(null);
+  const [, setBooking]       = useState<any>(null);
 
 useEffect(() => {
   async function loadEvent() {

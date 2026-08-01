@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, ArrowRight, Check, MessageSquare, Bug, Lightbulb, HelpCircle, User} from "lucide-react";
 import {FaGithub, FaLinkedin} from "react-icons/fa6";
-import { CallyMark, fadeUp } from "../shared";
+import { fadeUp } from "../shared";
 import logo from "../images/logo1.webp";
 const REASONS = [
   { id: "feedback",   icon: MessageSquare, label: "General feedback" },

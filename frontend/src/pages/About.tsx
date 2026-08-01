@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ArrowRight, Calendar, Link2, Zap, Shield, Heart, Code2, Coffee } from "lucide-react";
-import { CallyMark, useFadeInView, fadeUp } from "../shared";
+import { useFadeInView, fadeUp } from "../shared";
 import logo from "../images/logo1.webp";
 const STORY_POINTS = [
   {

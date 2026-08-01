@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router";
 import { motion } from "motion/react";
 import { Eye, EyeOff, ArrowRight, Globe } from "lucide-react";
-import { CallyMark, fadeUp } from "../shared";
+import { fadeUp } from "../shared";
 import { useAuth } from "../context/AuthContext.tsx";
 import api from "../services/api";
 import logo from "../images/logo1.webp"

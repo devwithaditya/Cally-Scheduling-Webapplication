@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { data, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Calendar, Clock, Plus, Pencil, Trash2, ToggleLeft, ToggleRight,
-  LogOut, User, Settings, Link2, Check, X, Copy, ChevronDown,Search,
+  LogOut, User, Check, X, Copy, ChevronDown,Search,
   Mail,
   BookOpen,
   ChevronRight,
   Video,
   Loader2
 } from "lucide-react";
-import { CallyMark, fadeUp } from "../shared";
+import { fadeUp } from "../shared";
 import { useAuth } from "../context/AuthContext";
 import api from "../services/api";
 import logo from "../images/logo1.webp";
@@ -634,14 +634,24 @@ function EventForm({ event, onClose, onSaved }: { event: Event | null; onClose: 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(""); setLoading(true);
-    try {
-      const body = { title, duration, description, color };
-      const res = event
-        ? await api.put(`/event-type/${event._id}`, { ...body, isActive: event.isActive })
-        : await api.post("/event-type", body);
-          onSaved();
-    } catch (err: any) { setError(err.message); }
-    finally { setLoading(false); }
+try {
+  const body = { title, duration, description, color };
+
+  if (event) {
+    await api.put(`/event-type/${event._id}`, {
+      ...body,
+      isActive: event.isActive,
+    });
+  } else {
+    await api.post("/event-type", body);
+  }
+
+  onSaved();
+} catch (err: any) {
+  setError(err.message);
+} finally {
+  setLoading(false);
+}
   }
 
   return (

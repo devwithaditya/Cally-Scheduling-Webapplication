@@ -26,5 +26,8 @@ app.use("/api",eventRouter)
 app.use("/api",avalRouter)
 app.use("/api",bookingRouter)
 
+app.get("/", (req, res) => {
+    res.status(200).send("OK");
+});
 
 module.exports = app;

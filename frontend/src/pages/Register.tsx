@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Eye, EyeOff, ArrowRight, Check, Mail } from "lucide-react";
-import { CallyMark, fadeUp } from "../shared";
+import { fadeUp } from "../shared";
 import api from "../services/api";
 import logo from "../images/logo1.webp"
 const PERKS = [

@@ -866,7 +866,7 @@ function connectCalendar() {
     const token = localStorage.getItem("accessToken");
 
     window.location.href =
-    `http://localhost:3000/api/auth/google/calendar?token=${token}`;
+      `${import.meta.env.VITE_API_URL}/auth/google/calendar?token=${token}`;
 }
 
   return (

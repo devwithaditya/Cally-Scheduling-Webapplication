@@ -161,7 +161,7 @@ export function Landing() {
               </motion.div>
               <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                 className="border border-border text-foreground font-semibold px-7 py-3.5 rounded-xl hover:bg-secondary transition-colors duration-200">
-                Watch demo
+                Learn More
               </motion.button>
             </motion.div>
             <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={4}

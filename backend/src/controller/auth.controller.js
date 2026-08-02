@@ -254,7 +254,7 @@ async function googleCallback(req,res){
     })
 
     res.redirect(
-    `http://localhost:5173/google-success?token=${accessToken}`
+      `${process.env.FRONTEND_URL}/google-success?token=${accessToken}`
     );
 }
 
@@ -292,7 +292,7 @@ async function googleCalendarCallback(req, res) {
   console.log(userId);
   console.log(tokens);
   res.redirect(
-    "http://localhost:5173/google-calendar-success"
+    `${process.env.FRONTEND_URL}/google-calendar-success`
   );
 }
 

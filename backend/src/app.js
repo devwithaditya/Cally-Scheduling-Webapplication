@@ -7,8 +7,11 @@ const passport = require("passport")
 const cors = require("cors")
 require("./config/passport");
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true
+  origin: [
+    process.env.FRONTEND_URL,
+    "https://meetcally.netlify.app"
+  ],
+  credentials: true
 }));
 app.use(passport.initialize())
 

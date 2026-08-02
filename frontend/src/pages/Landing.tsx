@@ -160,7 +160,7 @@ export function Landing() {
                 </Link>
               </motion.div>
               <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
-                className="border border-border text-foreground font-semibold px-7 py-3.5 rounded-xl hover:bg-secondary transition-colors duration-200">
+                className="border border-border text-foreground font-semibold px-7 py-3.5 rounded-xl hover:bg-secondary transition-colors duration-200" onClick={()=>{document.getElementById("how-it-works")?.scrollIntoView({behavior:"smooth"})}}>
                 Learn More
               </motion.button>
             </motion.div>
@@ -368,7 +368,7 @@ export function Landing() {
       </section>
 
       {/* ── How it works ── */}
-      <section ref={howItWorksSection.ref} className="bg-white border-y border-border py-24">
+      <section ref={howItWorksSection.ref} className="bg-white border-y border-border py-24" id="how-it-works">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" animate={howItWorksSection.inView ? "visible" : "hidden"}
             className="text-center mb-16">

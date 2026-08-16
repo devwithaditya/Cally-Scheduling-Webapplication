@@ -472,8 +472,12 @@ http://localhost:3000/api/auth/google/calendar/callback
 
 ## Common Issues
 
-### Google Meet link is undefined
+### Google Meet link is undefined 
 
+First check whether calendar is connected or not in profile section
+if not then connect the calendar because both are interconnected.
+
+Then Check :
 Make sure the Calendar event request includes conference data:
 
 ``` js

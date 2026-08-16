@@ -1,4 +1,4 @@
-# Cally
+# Cally![alt text](image.png)
 
 ### Smart Appointment Scheduling Platform
 

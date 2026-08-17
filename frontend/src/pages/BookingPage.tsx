@@ -132,6 +132,7 @@ setStep("confirmed");
             alt="Cally"
             className="w-10 h-12 object-contain"
           />
+          <span className="font-bold text-2xl">Cally</span>
         <h1 className="text-2xl font-extrabold mt-6 mb-2" style={{ fontFamily: "'Instrument Serif', serif" }}>Page not found</h1>
         <p className="text-muted-foreground text-sm">This booking link doesn't exist or has been removed.</p>
       </div>

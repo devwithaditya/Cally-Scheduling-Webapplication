@@ -190,12 +190,15 @@ useEffect(() => {
 
 if (loading) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-background z-50">
+    <div className="flex items-center justify-center min-h-[400px]">
       <DotLottieReact
         src="/loading.lottie"
         loop
         autoplay
-        style={{ width: 150, height: 150 }}
+        style={{
+          width: 120,
+          height: 120,
+        }}
       />
     </div>
   );

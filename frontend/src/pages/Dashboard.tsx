@@ -14,6 +14,7 @@ import { fadeUp } from "../shared";
 import { useAuth } from "../context/AuthContext";
 import api from "../services/api";
 import logo from "../images/logo1.webp";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // ── types ────────────────────────────────────────────────────────────────────
 interface Event { _id: string; title: string; duration: number; description: string; color: string; slug: string; isActive: boolean; }
 type Day = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
@@ -189,10 +190,15 @@ useEffect(() => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center py-20">
-        Loading bookings...
-      </div>
-    );
+    <div className="fixed inset-0 flex items-center justify-center bg-background z-50">
+      <DotLottieReact
+        src="/loading.lottie"
+        loop
+        autoplay
+        style={{ width: 150, height: 150 }}
+      />
+    </div>
+  );
   }
 
   const today = new Date().toISOString().split("T")[0];

@@ -188,21 +188,13 @@ useEffect(() => {
   loadBookings();
 }, []);
 
-if (loading) {
-  return (
-    <div className="flex items-center justify-center min-h-[400px]">
-      <DotLottieReact
-        src="/loading.lottie"
-        loop
-        autoplay
-        style={{
-          width: 120,
-          height: 120,
-        }}
-      />
-    </div>
-  );
-}
+    if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        Loading Bookings...
+      </div>
+    );
+  }
 
   const today = new Date().toISOString().split("T")[0];
 

@@ -188,8 +188,8 @@ useEffect(() => {
   loadBookings();
 }, []);
 
-  if (loading) {
-    return (
+if (loading) {
+  return (
     <div className="fixed inset-0 flex items-center justify-center bg-background z-50">
       <DotLottieReact
         src="/loading.lottie"
@@ -199,7 +199,7 @@ useEffect(() => {
       />
     </div>
   );
-  }
+}
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -259,7 +259,6 @@ useEffect(() => {
 
   return (
     <motion.div variants={fadeUp} initial="hidden" animate="visible" exit={{ opacity: 0 }} className="p-6 md:p-10 max-w-5xl">
-
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-extrabold" style={{ fontFamily: "'Instrument Serif', serif" }}>Bookings</h1>

@@ -750,6 +750,14 @@ function AvailabilityTab() {
       .finally(() => setLoading(false));
   }, []);
 
+    if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        Loading Availability...
+      </div>
+    );
+  }
+
   function addSlot(day: Day) {
     setAvailability(prev => ({ ...prev, [day]: [...prev[day], { startTime: "09:00", endTime: "17:00" }] }));
   }

@@ -15,7 +15,7 @@ const REASONS = [
 const SOCIALS = [
   { icon: Mail,   label: "Email",   href: "mailto:rajadityafeb22@gmail.com", sub: "rajadityafeb22@gmail.com" },
   { icon: FaGithub, label: "GitHub",  href: "https://github.com/devwithaditya",sub: "View the source code" },
-  { icon: FaLinkedin,label: "Linkedin", href: "www.linkedin.com/in/codewithaditya",sub: "@Linkedin" },
+  { icon: FaLinkedin,label: "Linkedin", href: "https://linkedin.com/in/codewithaditya",sub: "@Linkedin" },
   { icon: User,label: "Portfolio", href: "http://devwithaditya.me/",sub: "@Portfolio" },
 
 ];

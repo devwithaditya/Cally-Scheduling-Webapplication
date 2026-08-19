@@ -188,13 +188,13 @@ useEffect(() => {
   loadBookings();
 }, []);
 
-    if (loading) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        Loading Bookings...
-      </div>
-    );
-  }
+  //   if (loading) {
+  //   return (
+  //     <div className="flex justify-center items-center py-20">
+  //       Loading Bookings...
+  //     </div>
+  //   );
+  // }
 
   const today = new Date().toISOString().split("T")[0];
 

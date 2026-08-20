@@ -13,8 +13,7 @@ import {
 import { fadeUp } from "../shared";
 import { useAuth } from "../context/AuthContext";
 import api from "../services/api";
-import logo from "../images/logo1.webp";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import logo from "../images/logo1.webp"; 
 // ── types ────────────────────────────────────────────────────────────────────
 interface Event { _id: string; title: string; duration: number; description: string; color: string; slug: string; isActive: boolean; }
 type Day = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
